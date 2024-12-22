@@ -1,0 +1,19 @@
+{
+  "name": "ln-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "Valeriia <leran14@ukr.net>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "puppeteer": "^23.11.1",
+    "winston": "^3.17.0"
+  }
+}
