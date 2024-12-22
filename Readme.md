@@ -18,19 +18,18 @@ This project uses Puppeteer for browser automation and Winston for logging. The 
 
 # Installation
 
-1. Clone the repository:
-   git clone <URL репозитория>
+1. Clone the repository.
 
 2. Install dependencies:
 
-   npm install
+   `npm install`
 
-3. Rename the .env.example file to .env.
+3. Rename the .env.example file to `.env`.
 
-4. Fill in the variable values in the .env file.
+4. Fill in the variable values in the `.env file`.
 
 5. To run the script, execute the command:
-   npm start
+   `npm start`
 
 # The script will perform the following steps:
 
