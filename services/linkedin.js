@@ -11,7 +11,7 @@ dotenv.config();
 // LinkedIn Login
 async function loginToLinkedIn(page) {
   logger.info("Navigating to LinkedIn login page...");
-  await page.goto(process.env.LINKEDIN_LOGIN_URL, {
+  await page.goto(CONSTANTS.SELECTORS.LINKEDIN_LOGIN_URL, {
     waitUntil: "networkidle2", // Wait until the network load is complete
   });
 
@@ -47,8 +47,6 @@ async function navigateToProfilePage(page) {
 
 // Loading profile image
 async function fetchProfileImage(page) {
-  await navigateToProfilePage(page);
-
   const profileImageUrl = await page.evaluate((selector) => {
     const imageElement = document.querySelector(selector);
     return imageElement ? imageElement.src : null;
@@ -74,4 +72,4 @@ async function saveProfileImage(imageUrl) {
   }
 }
 
-module.exports = { loginToLinkedIn, fetchProfileImage };
+module.exports = { loginToLinkedIn, fetchProfileImage, navigateToProfilePage };

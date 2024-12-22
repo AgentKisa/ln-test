@@ -1,7 +1,11 @@
 const dotenv = require("dotenv");
 const logger = require("./utils/logger");
 const initializeBrowser = require("./utils/browser");
-const { loginToLinkedIn, fetchProfileImage } = require("./services/linkedin");
+const {
+  loginToLinkedIn,
+  fetchProfileImage,
+  navigateToProfilePage,
+} = require("./services/linkedin");
 
 dotenv.config();
 
@@ -15,6 +19,7 @@ dotenv.config();
 
     await loginToLinkedIn(page);
 
+    await navigateToProfilePage(page);
     await fetchProfileImage(page);
   } catch (error) {
     logger.error(`Error occurred: ${error.message}`);
